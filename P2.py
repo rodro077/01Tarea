@@ -1,6 +1,6 @@
 import numpy as np
 '''
-A continuaciòn se recopilaran los datos del espectro del sol, mediante
+A continuaciÃ²n se recopilaran los datos del espectro del sol, mediante
 el uso de un arreglo.
 '''
 datos = np.loadtxt('sun_AM0.dat')
@@ -21,4 +21,8 @@ for i in range(0,len(datos)-1):
     arearectangulo=x_dif*y_min
     areatriangulo=(y_max-y_min)*x_dif/2
     integral=integral+arearectangulo+areatriangulo
-print integral
+'''
+Finalmente calculo la luminosidad
+'''
+luminosidad = integral*4*pi*(au**2)
+print luminosidad
